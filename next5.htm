@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">    
+    <title>Next 5</title>
+     <script src="http://code.angularjs.org/snapshot/angular.min.js"></script>    
+</head>
+<body ng-app="RaceApp">
+  <script>
+  angular.module('RaceApp', [])
+    .controller('Next5Controller', ['$scope', '$interval',
+      function($scope, $interval) {          
+          $scope.raceurl = '/test.php';
+          $racedata = '';
+      }])
+     .directive('next5races', ['$interval', '$http','dateFilter',
+      function($interval, $http, dateFilter) {       
+        return function(scope, element, attrs) {
+          var format, stopTime, status, data; 
+          getData();
+          stopTime = $interval(updateContent, 1000*30);
+
+          function updateContent() {
+              getData();            
+          }
+          
+          function getData() {          	
+     		 $http({method: "GET", url: scope.raceurl}).
+        			then(function(response) {        				     
+         				status = response.status;
+          				data = response.data;
+          				scope.racedata = data.nextRaces; 
+        			}, function(response) {          				
+         				status = response.status;
+      			});
+    		 }
+         
+          element.on('$destroy', function() {
+            		$interval.cancel(stopTime);
+          });
+        }
+      }]).
+      filter("getTimeNum", function(){
+   			return function(str){     			
+     		     var closeTime = new Date(str);
+     		     var diff =  closeTime - Date.now();
+     		     return Math.floor((diff/1000)/60);
+   		}
+	});
+</script>
+
+<div>
+  <div ng-controller="Next5Controller">
+    <b>Next 5 races</b> <hr/>
+    <span next5races="format"></span>
+    <ul>
+  		<li ng-repeat="x in racedata | orderBy:closeTime">
+  			<div ng-click="showDetails = ! showDetails">
+  				<b>{{ x.raceName}},</b>
+  				<span>{{ x.raceType}},</span>
+  				<span>{{ x.meeting}},</span>	
+  				<b>{{ x.closeTime | getTimeNum}}</b> minutes left    			
+    			</div>
+        			 <div ng-show="showDetails">
+            			   <div ng-repeat="cp in x.competitors"> 
+            			   		<span>{{cp.position}},</span>
+            			   		<span>{{cp.name}}</span>
+            			  </div> 
+         		 </div>
+  		</li>
+  		
+  		
+	</ul>    
+  </div>
+</div>
+</body>
+</html>

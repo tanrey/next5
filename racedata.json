@@ -1,0 +1,150 @@
+ {
+  "nextRaces": [
+    {
+      "raceId": 1004,
+      "closeTime": "2017-10-17T10:20:00",
+      "raceName": "Race1",
+      "raceType": "Thoroughbred",
+      "meeting": "Albion Park",
+      "competitors": [
+        {
+          "cpId": 101,
+          "name": "GOLDEN STORM",
+          "position": 1
+        },
+        {
+          "cpId": 102,
+          "name": "BAILEY BE GOOD",
+          "position": 2
+        },
+        {
+          "cpId": 103,
+          "name": "STETSON JESS",
+          "position": 3
+        },
+        {
+          "cpId": 104,
+          "name": "FARMOR IN TUNE",
+          "position": 4
+        }
+      ]
+    },
+    {
+      "raceId": 1005,
+      "closeTime": "2017-10-17T10:30:00",
+      "raceName": "Race2",
+      "raceType": "Greyhounds",
+      "meeting": "Bathurst",
+      "competitors": [
+        {
+          "cpId": 101,
+          "name": "GOLDEN STORM",
+          "position": 1
+        },
+        {
+          "cpId": 102,
+          "name": "BAILEY BE GOOD",
+          "position": 2
+        },
+        {
+          "cpId": 103,
+          "name": "STETSON JESS",
+          "position": 3
+        },
+        {
+          "cpId": 104,
+          "name": "FARMOR IN TUNE",
+          "position": 4
+        }
+      ]
+    },
+    {
+      "raceId": 1006,
+      "closeTime": "2017-10-17T10:48:00",
+       "raceName": "Race3",
+      "raceType": "Harness",
+      "meeting": "Pinjarra",
+      "competitors": [
+        {
+          "cpId": 101,
+          "name": "GOLDEN STORM",
+          "position": 1
+        },
+        {
+          "cpId": 102,
+          "name": "BAILEY BE GOOD",
+          "position": 2
+        },
+        {
+          "cpId": 103,
+          "name": "STETSON JESS",
+          "position": 3
+        },
+        {
+          "cpId": 104,
+          "name": "FARMOR IN TUNE",
+          "position": 4
+        }
+      ]
+    },
+    {
+      "raceId": 10007,
+      "closeTime": "2017-10-17T11:07:00",
+       "raceName": "Race4",
+      "raceType": "Greyhounds",
+      "meeting": "Canberra",
+      "competitors": [
+        {
+          "cpId": 101,
+          "name": "GOLDEN STORM",
+          "position": 1
+        },
+        {
+          "cpId": 102,
+          "name": "BAILEY BE GOOD",
+          "position": 2
+        },
+        {
+          "cpId": 103,
+          "name": "STETSON JESS",
+          "position": 3
+        },
+        {
+          "cpId": 104,
+          "name": "FARMOR IN TUNE",
+          "position": 4
+        }
+      ]
+    },
+    {
+      "raceId": 1008,
+      "closeTime": "2017-10-17T11:18:00",
+       "raceName": "Race5",
+      "raceType": "Harness",
+      "meeting": "Warragul",
+      "competitors": [
+        {
+          "cpId": 101,
+          "name": "GOLDEN STORM",
+          "position": 1
+        },
+        {
+          "cpId": 102,
+          "name": "BAILEY BE GOOD",
+          "position": 2
+        },
+        {
+          "cpId": 103,
+          "name": "STETSON JESS",
+          "position": 3
+        },
+        {
+          "cpId": 104,
+          "name": "FARMOR IN TUNE",
+          "position": 4
+        }
+      ]
+    }
+      ]
+} 
+
